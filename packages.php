@@ -62,8 +62,6 @@
             <th>End date</th>
             <th>Description</th>
             <th>Base Price</th>
-            
-            <th>Products</th>
             <th>Book</th>
           </tr>
 
@@ -99,8 +97,7 @@
                         <td>$endDate</td>
                         <td>$temp->description</td>
                         <td>\$$basePrice</td>
-                        
-                        <td>$products</td>
+
                         <td><button type='submit' name='button".$i."' value=$i class='btn btn-success' ";
                 //turn the button disabled if the start date has passed
                 if (!$temp->checkStartDate())

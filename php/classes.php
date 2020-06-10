@@ -33,29 +33,7 @@ class Package
     	$this->basePrice=$row[4];
 		$this->agencyCommission=$row[5];
 		
-    	//get productSupplierId from packages_products_suppliers table
-    	$sql = "SELECT ProductSupplierId FROM packages_products_suppliers WHERE PackageId = $pkgId";
-    	$result=$myDb->query($sql);
-    	while ($row = $result->fetch_row())
-    		$this->productSupplierIds[]=$row[0];
-
-    	//get productId from products_suppliers table
-    	foreach ($this->productSupplierIds as $PSid)
-    	{
-    		$sql = "SELECT ProductId FROM products_suppliers WHERE ProductSupplierId = $PSid";
-    		$result=$myDb->query($sql);
-    		$row = $result->fetch_row();
-    		$this->productIds[]= $row[0];
-    	}
-
-    	//get ProdName from products table
-    	foreach ($this->productIds as $Pid)
-    	{
-    		$sql = "SELECT ProdName FROM products WHERE ProductId = $Pid";
-    		$result=$myDb->query($sql);
-    		$row = $result->fetch_row();
-    		$this->productNames[]= $row[0];
-    	}
+    	
     	
     	$myDb->close();
 	}

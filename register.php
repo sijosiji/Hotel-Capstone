@@ -73,7 +73,7 @@ Register Page
 
 <!-- Username and Passwor Form -->
 <section>
-	<div class="card" style="background-color: skyblue;">
+	<div class="card" style="background-color: khaki;">
 		<div class="row" style="height: 2rem;"></div>
 		<div class="row">
 			<div class="col-sm-1"></div>
@@ -166,7 +166,7 @@ Register Page
            						<div class="input-group-prepend">
               						<span class="input-group-text span-width-register">City:</span>
            						</div>
-            						<input type="text" class="form-control" placeholder="Calgary" name="CustCity" value="<?php if(isset($_POST['CustCity'])) echo $_POST['CustCity']; ?>">
+            						<input type="text" class="form-control" placeholder="Edmonton" name="CustCity" value="<?php if(isset($_POST['CustCity'])) echo $_POST['CustCity']; ?>">
           					</div>
 						</div>
 						<div class='col-sm-6' id='CustCity' style='visibility: hidden'></div>

@@ -1,9 +1,4 @@
-<!--
-Login Page
--->
-
 <?php session_start();?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +34,7 @@ Login Page
       // echo 'Session is active <br>';}
       // echo "User Name = " . $_SESSION["Username"] . "<br>";?>
 	<section>
-		<div class="card" style="background-color: skyblue; height: 32rem;">
+		<div class="card" style="background-color: khaki; height: 32rem;">
 			<div class="row" style="height: 2rem;"></div>
 				<div class="row">
 					<div class="col-sm-1"></div>
@@ -106,7 +101,7 @@ Login Page
     }
     ?>
     <section>
-      <div class="card" style="background-color: skyblue; height: 32rem;">
+      <div class="card" style="background-color: khaki; height: 32rem;">
         <div class="row" style="height: 2rem;"></div>
         <div class="row">
           <div class="col-sm-1"></div>
@@ -165,11 +160,8 @@ if(isset($_POST["Login"])){
   }
 }
  ?>
-
-
 <!-- Close the Else statement for the session -->
  <?php
   }
 ?>
-
 <?php include "php/footer.php"?>

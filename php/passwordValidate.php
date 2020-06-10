@@ -21,7 +21,7 @@ function passwordValidate(){
   // print_r($loginPasswordInput);
   //Server Side Username/Password Array
   //Connect To database
-  $link = mysqli_connect("localhost", "root", "", "Capstones") or die("Connection Error: " . mysqli_connect_error());
+  $link = mysqli_connect("localhost", "root", "", "capstones") or die("Connection Error: " . mysqli_connect_error());
 
   //Create an array for usernames and passwords, validates that username and password matches
   $sql = "select Username, Password from customers";

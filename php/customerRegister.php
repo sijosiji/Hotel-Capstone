@@ -33,7 +33,7 @@ function customerRegister(){
 
 
 //Script to redirect you to the Login Page
-$link = mysqli_connect("localhost", "root", "", "Capstones") or die("Connection Error: " . mysqli_connect_error());
+$link = mysqli_connect("localhost", "root", "", "capstones") or die("Connection Error: " . mysqli_connect_error());
 
 $sql = "insert into customers ($returnKeys) values ($returnString)";
 $result = mysqli_query($link, $sql) or die("SQL Error");

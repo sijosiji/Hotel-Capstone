@@ -2,7 +2,7 @@
 
 
 <form action="packages.php" method="POST">  
-  <div class='jumbotron' style='background-color:skyblue'>
+  <div class='jumbotron' style='background-color:khaki'>
     <div class='row'>
         <div class='col-sm-2'></div>
         <div class='col-sm-7'>

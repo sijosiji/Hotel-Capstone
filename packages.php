@@ -1,6 +1,3 @@
-<!--
-Packages page for Capstone Project
--->
 <?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +25,7 @@ Packages page for Capstone Project
     }
   	?>
     <!-- area for search input -->
-    <div class='jumbotron' style='background-color:skyblue'>
+    <div class='jumbotron' style='background-color:khaki'>
       <div class='row'>
         <div class='col-sm-1'></div>
         <div class='col-sm-8'>
@@ -45,7 +42,7 @@ Packages page for Capstone Project
     	<?php 
     	include 'php/classes.php';
       //connect to the database to get the number of rows of Package table
-    	$myDb = new mysqli('localhost', 'root', '','Capstones');
+    	$myDb = new mysqli('localhost', 'root', '','capstones');
     	$sql = "SELECT PackageId FROM packages";
     	$result=$myDb->query($sql);
     	$numRows=$result->num_rows;
@@ -57,10 +54,10 @@ Packages page for Capstone Project
     	}
     	?>
 
-    	<form action="<?php if(isset($_SESSION['Username'])) echo 'ordersV2.php'; else echo 'login.php'; ?>" method="POST" id="packageForm">
+    	<form action="<?php if(isset($_SESSION['Username'])) echo 'order.php'; else echo 'login.php'; ?>" method="POST" id="packageForm">
   		  <table id="packageTable" style="width:100%" class="table table-hover table-borderless text-center">
     			<tr>
-            <th>Package Name</th>
+            <th>Hotel Deal</th>
             <th>Start Date</th>
             <th>End date</th>
             <th>Description</th>
@@ -88,6 +85,7 @@ Packages page for Capstone Project
                 $basePrice=round($basePrice,2);
                 $agencyCommission=round($agencyCommission,2);
                 $products = implode(", ",${'package'.$i}->productNames);
+                //$websitelink=$websitelink;
                 //print out the package's information 
                 echo "<tr>
                         <td>$temp->name</td>
@@ -112,7 +110,8 @@ Packages page for Capstone Project
                 echo "      >";
                 //if the start date has passed, the button says Expired. Otherwise, Book
                 if ($temp->checkStartDate())
-                  echo "Order";
+                echo "Order";
+                 // echo " <a href='https://www.jumeirah.com/en/stay/dubai/burj-al-arab-jumeirah?utm_source=google&utm_medium=google%20places&utm_campaign=hotel' target='_blank'>Book Hotel</a>";
                 else 
                   echo "Expired"; 
                 echo "</button></td>

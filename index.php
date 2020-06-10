@@ -19,10 +19,7 @@ Main Page for Capstone Project
   include "php/search.php"; ?>
   <div class="container">
 
-    <?php
-					
-          include "php/cities.php";
-    ?>
+  
 
 
   </div>

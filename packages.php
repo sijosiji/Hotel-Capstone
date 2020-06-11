@@ -46,15 +46,15 @@
     	$sql = "SELECT PackageId FROM packages";
     	$result=$myDb->query($sql);
     	$numRows=$result->num_rows;
-    	$myDb->close();
+      $myDb->close();
+
       //create Package objects according to the number of rows in the database
     	for ($i=1;$i<$numRows+1;$i++)
     	{
     		${'package'.$i} = new Package($i); 
     	}
     	?>
-
-    	<form action="<?php if(isset($_SESSION['Username'])) echo 'order.php'; else echo 'login.php'; ?>" method="POST" id="packageForm">
+    	<form action="<?php if(isset($_SESSION['Username'])) echo 'http://www.jumeirah.com/en/booking/hotel-booking?hotelItemId=ee23c456-990b-4f7b-b7db-de9ed2dd4d8a&bookingWithPoints=false'; else echo 'login.php'; ?>" method="POST" id="packageForm">
   		  <table id="packageTable" style="width:100%" class="table table-hover table-borderless text-center">
     			<tr>
             <th>Hotel Deal</th>
@@ -108,6 +108,7 @@
                 //if the start date has passed, the button says Expired. Otherwise, Book
                 if ($temp->checkStartDate())
                 echo "Order";
+                //echo '<input type=button onClick="location.href='http://facebook.com'" value='click here to visit home page'>';
                  // echo " <a href='https://www.jumeirah.com/en/stay/dubai/burj-al-arab-jumeirah?utm_source=google&utm_medium=google%20places&utm_campaign=hotel' target='_blank'>Book Hotel</a>";
                 else 
                   echo "Expired"; 

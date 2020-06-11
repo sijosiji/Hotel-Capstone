@@ -9,6 +9,6 @@ SESSION_START();
 $_SESSION = array();
 session_destroy();
 
-header("Location: http://localhost/cap/login.php");
+header("Location: http://localhost:8080/cap/login.php");
 
  ?>
